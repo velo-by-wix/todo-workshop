@@ -1,0 +1,17 @@
+import wixData from 'wix-data';
+
+export async function removeCompletedTasks() {
+	const queryResult = await wixData.query('TodoTasks').eq('completed', true).find()
+	const completedTasksIds = queryResult.items.map((task) => task._id)
+	return wixData.bulkRemove('TodoTasks', completedTasksIds)
+}
+
+export async function getActiveTaskCount() {
+	const activeTaskCount = await wixData.query('TodoTasks')
+		.eq('completed', false)
+		.or(wixData.query('TodoTasks')
+			.eq('completed', null))
+		.count()
+
+	return activeTaskCount
+}

@@ -1,0 +1,144 @@
+{
+  "displayName": "PriceQuotes",
+  "permissions": {
+    "read": "anyone"
+  },
+  "maxPageSize": 100,
+  "allowedOperations": [
+    "count",
+    "get",
+    "find"
+  ],
+  "id": "Billing/PriceQuotes",
+  "isDeleted": false,
+  "ownerAppId": "55cd9036-36bb-480b-8ddc-afda3cb2eb8d",
+  "displayNamespace": "Billing",
+  "fields": {
+    "acceptanceDate": {
+      "displayName": "Acceptance Date",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 11
+    },
+    "number": {
+      "displayName": "Number",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 3
+    },
+    "lastSeenDate": {
+      "displayName": "Last Seen Date",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 12
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": false,
+      "queryOperators": [
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 0
+    },
+    "total": {
+      "displayName": "Total",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 7
+    },
+    "version": {
+      "displayName": "Version",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "number",
+      "index": 1
+    },
+    "invoice": {
+      "displayName": "Invoice",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "validThroughDate": {
+      "displayName": "Valid Through Date",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 10
+    },
+    "status": {
+      "displayName": "Status",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "customer": {
+      "displayName": "Customer",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "object",
+      "index": 6
+    },
+    "currencyCode": {
+      "displayName": "Currency Code",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "issueDate": {
+      "displayName": "Issue Date",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 9
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 4
+    }
+  },
+  "displayField": "number",
+  "storage": "driver",
+  "defaultSort": {
+    "fieldName": "number",
+    "direction": "desc"
+  },
+  "namespace": "Billing"
+}

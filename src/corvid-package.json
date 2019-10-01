@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@sendgrid/mail": "6.2.1"
+	}
+}

@@ -1,0 +1,22 @@
+import sgMail from '@sendgrid/mail';
+import { getActiveTaskCount } from 'backend/taskOperations'
+
+const KEY = '<sendgrid_key>'
+
+async function sendEmail(to, subject, content) {
+	sgMail.setApiKey(KEY)
+	const message = {
+		to,
+		from: '<from_email>',
+		subject,
+		text: content
+	}
+	return sgMail.send(message)
+}
+
+export async function sendTaskReminder() {
+	const activeTaskCount = await getActiveTaskCount()
+    const content = activeTaskCount === 1 ? 'One task left' : `${activeTaskCount} items left`
+
+    await sendEmail('<to_email>', 'Tasks Reminder!', content)
+}

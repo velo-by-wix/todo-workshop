@@ -1,0 +1,123 @@
+{
+  "displayName": "Tasks",
+  "permissions": "none",
+  "maxPageSize": 50,
+  "allowedOperations": [
+    "get",
+    "count",
+    "find"
+  ],
+  "id": "CRM/Tasks",
+  "isDeleted": false,
+  "ownerAppId": "146c0d71-352e-4464-9a03-2e868aabe7b9",
+  "displayNamespace": null,
+  "fields": {
+    "isCompleted": {
+      "displayName": "Completed",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 3
+    },
+    "creatorType": {
+      "displayName": "Creator Type",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": false,
+      "queryOperators": [
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 0
+    },
+    "applicationId": {
+      "displayName": "Application Id",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "dueAt": {
+      "displayName": "Due Date",
+      "sortable": true,
+      "queryOperators": [
+        "gt",
+        "lt"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 6
+    },
+    "version": {
+      "displayName": "Version",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 2
+    },
+    "contactId": {
+      "displayName": "Contact Id",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 4
+    },
+    "assigneeId": {
+      "displayName": "Assignee Id",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "userId": {
+      "displayName": "User Id",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "contains"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 1
+    }
+  },
+  "displayField": "title",
+  "storage": "driver",
+  "namespace": "CRM"
+}

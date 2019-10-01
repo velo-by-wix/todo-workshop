@@ -1,0 +1,94 @@
+{
+  "displayName": "TodoTasks",
+  "permissions": {
+    "anonymous": {
+      "insert": true,
+      "update": true,
+      "remove": true,
+      "read": true
+    },
+    "siteMember": {
+      "insert": true,
+      "update": true,
+      "remove": true,
+      "read": true
+    },
+    "dataOwner": {
+      "update": true,
+      "remove": true,
+      "read": true
+    },
+    "meta": null,
+    "siteOwner": {
+      "insert": true,
+      "update": true,
+      "remove": true,
+      "read": true
+    }
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "TodoTasks",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 3
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 5
+    },
+    "completed": {
+      "displayName": "Completed",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 1
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}

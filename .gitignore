@@ -1,0 +1,4 @@
+node_modules/
+.corvid/
+src/**/*.wix
+src/.metadata.json
