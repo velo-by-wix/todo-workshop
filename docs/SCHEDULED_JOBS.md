@@ -56,6 +56,6 @@ export async function sendTaskReminder() {
 
 :exclamation: **You created a scheduled job! Set the time in the job scheduler to a minute from now (UTC time). Make sure you get the email**
 
-:warning: You can debug your application backend code using Corvid [site monitoring](https://support.wix.com/en/article/corvid-about-site-monitoring)
+:warning: You can debug your application backend code using Velo [site monitoring](https://support.wix.com/en/article/velo-about-site-monitoring)
 
 :fast_forward: Next Module => [Going to production](PRODUCTION.md)
