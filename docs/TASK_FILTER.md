@@ -5,11 +5,11 @@ In this module, we will add a filter for our tasks by the tasks completed status
 <p padding="40px"><img src="assets/tasks-filter.png" alt="Tasks Filter" width="40%" height="40%"></p>
 
 **:bulb: New concepts**
-- [WixDataFilter](https://www.wix.com/corvid/reference/wix-data.WixDataFilter.html) - Provides functionality for filtering a query.
+- [WixDataFilter](https://www.wix.com/velo/reference/wix-data.WixDataFilter.html) - Provides functionality for filtering a query.
 
 **:white_check_mark: Step-by-step directions**
 
-1. Add a [radioButtonGroup.onChange](https://www.wix.com/corvid/reference/$w.RadioButtonGroup.html#onChange) event for the filter [radio group](https://www.wix.com/corvid/reference/$w.RadioButtonGroup.html) element.
+1. Add a [radioButtonGroup.onChange](https://www.wix.com/velo/reference/$w.RadioButtonGroup.html#onChange) event for the filter [radio group](https://www.wix.com/velo/reference/$w.RadioButtonGroup.html) element.
 
 ```
 $w('#filterRadioGroup').onChange(() => {
@@ -17,13 +17,13 @@ $w('#filterRadioGroup').onChange(() => {
 })
 ```
 
-2. Get the filter value from the [radioButtonGroup.value](https://www.wix.com/corvid/reference/$w.RadioButtonGroup.html#value) getter.
+2. Get the filter value from the [radioButtonGroup.value](https://www.wix.com/velo/reference/$w.RadioButtonGroup.html#value) getter.
 
 ```
 const filterValue = $w('#filterRadioGroup').value
 ```
 
-3. Create the filter using the [eq](https://www.wix.com/corvid/reference/wix-data.WixDataFilter.html#eq) condition.
+3. Create the filter using the [eq](https://www.wix.com/velo/reference/wix-data.WixDataFilter.html#eq) condition.
 
 ```
 let filter
@@ -41,7 +41,7 @@ switch (filterValue) {
 
 ```
 
-4. Pass the filter to the [dataset.setFilter](https://www.wix.com/corvid/reference/wix-dataset.Dataset.html#setFilter) function.
+4. Pass the filter to the [dataset.setFilter](https://www.wix.com/velo/reference/wix-dataset.Dataset.html#setFilter) function.
 
 ```
 await $w('#dataset1').setFilter(filter)
