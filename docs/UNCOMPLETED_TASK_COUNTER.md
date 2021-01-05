@@ -5,7 +5,7 @@ In this module, we will present the remaining uncompleted tasks counter in the t
 <p padding="40px"><img src="assets/uncompleted-task-counter.png" alt="Uncompleted Task Counter" width="40%" height="40%"></p>
 
 **:bulb: New concepts**
-- [WixDataQuery](https://www.wix.com/corvid/reference/wix-data.WixDataQuery.html) - Contains functionality for refining a data query.
+- [WixDataQuery](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html) - Contains functionality for refining a data query.
 
 **:white_check_mark: Step-by-step directions**
 
@@ -17,7 +17,7 @@ async function updateActiveTaskCount() {
 }
 ```
 
-2. Add a query that will use the condition [eq](https://www.wix.com/corvid/reference/wix-data.WixDataQuery.html#eq) to retrieve the amount of the uncompletted tasks from the collection.
+2. Add a query that will use the condition [eq](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#eq) to retrieve the amount of the uncompletted tasks from the collection.
 
 ```
 async function updateActiveTaskCount() {
@@ -29,7 +29,7 @@ async function updateActiveTaskCount() {
 })
 ```
 
-3. Udate the task counter [text element](https://www.wix.com/corvid/reference/$w.Text.html#text) according to the query result.
+3. Udate the task counter [text element](https://www.wix.com/velo/reference/$w.Text.html#text) according to the query result.
 
 ```
 async function updateActiveTaskCount() {
