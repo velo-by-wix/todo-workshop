@@ -4,7 +4,7 @@ In this module, we will move the code for getting the active task count to the s
 
 **:bulb: New concepts**
 
-- [JavaScript Web Modules](https://support.wix.com/en/article/corvid-web-modules-calling-server-side-code-from-the-front-end) - Calling server-side code from the front-end.
+- [JavaScript Web Modules](https://support.wix.com/en/article/velo-web-modules-calling-server-side-code-from-the-front-end) - Calling server-side code from the front-end.
 
 **:white_check_mark: Step-by-step directions**
 
