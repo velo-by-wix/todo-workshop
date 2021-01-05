@@ -1,11 +1,11 @@
 # Corvid TODO Workshop
 
-In this workshop, you will build a [TODO appliction](https://corvidtodo.com) using Corvid by Wix.
+In this workshop, you will build a [TODO appliction](https://corvidtodo.com) using Velo by Wix.
 
 **:link: Useful links** 
 
-- [Corvid API Reference](https://www.wix.com/corvid/reference/) covers all of Corvid's APIs. 
-- [Corvid Home Page](https://www.wix.com/corvid) contains all Corvid materials.
+- [Velo API Reference](https://www.wix.com/velo/reference/) covers all of Velo's APIs. 
+- [Velo Home Page](https://www.wix.com/velo) contains all Velo materials.
 - [corvid-cli npm package](https://www.npmjs.com/package/corvid-cli) enables you to work in your own local editor.
 
 The complete code for the application is in the [src](src) folder.
@@ -35,7 +35,7 @@ This workshop is divided into four modules. Each module describes what we're goi
 | [Tasks Filter](docs/TASK_FILTER.md)                                          | Filter the tasks according to the completed status.                       |
 | [Clear Completed Tasks](docs/CLEAR_COMPLETED_TASKS.md)                       | Clear all completed tasks from the collection.                            |
 | [JavaScript Web Modules](docs/JS_WEB_MODULES.md)                                                   | Call server-side code from the front-end.                                                             |
-| [Corvid Package Manager](docs/PACKAGE_MANAGER.md)                                                              | Manage your site's npm packages with the Package Manager.                                                              |
+| [Velo Package Manager](docs/PACKAGE_MANAGER.md)                                                              | Manage your site's npm packages with the Package Manager.                                                              |
 | [Scheduled Jobs](docs/SCHEDULED_JOBS.md)                                       | Schedule code to run at specified intervals using the Job Scheduler.                                                               |
 | [Production](docs/PRODUCTION.md)                                                           | Go live.                                                               |
 
