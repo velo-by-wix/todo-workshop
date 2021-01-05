@@ -4,7 +4,7 @@ In this module, we'll create a database collection to store the application task
 
 <br>**:white_check_mark: Step-by-step instructions**
 
-1. From the top bar menu, hover over **Dev Mode** and click **Turn on Dev Mode** to enable Corvid. <p padding="40px"><img src="assets/dev-mode-on.png" alt="Enable Dev Mode" width="50%" height="50%"></p>  
+1. From the top bar menu, hover over **Dev Mode** and click **Turn on Dev Mode** to enable Velo. <p padding="40px"><img src="assets/dev-mode-on.png" alt="Enable Dev Mode" width="50%" height="50%"></p>  
 2. From the **Site Structure** sidebar on the left, under the **Database** section, click on the **Add a new collection** link. <p padding="40px"><img src="assets/add-collection.png" alt="Add Collection" width="30%" height="30%"></p>
 3. Click **Start Creating**. In the next panel that opens, click the button on the right, **Create a Collection**.
 4. Name the collection **TodoTasks**. Click the **Create Collection** button.
