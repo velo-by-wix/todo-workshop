@@ -12,8 +12,8 @@ Lightbox:
 
 **:bulb: New concepts**
 
-- [WixWindow](https://www.wix.com/corvid/reference/wix-window.html) - Contains functionality that pertains to the current browser window.
-- [WixWindow.lightbox](https://www.wix.com/corvid/reference/wix-window.lightbox.html) - API for use in a lightbox front-end code.
+- [WixWindow](https://www.wix.com/velo/reference/wix-window.html) - Contains functionality that pertains to the current browser window.
+- [WixWindow.lightbox](https://www.wix.com/velo/reference/wix-window.lightbox.html) - API for use in a lightbox front-end code.
 
 **:white_check_mark: Step-by-step directions**
 
@@ -31,7 +31,7 @@ $w('#clearCompletedButton').onClick(async () => {
 })
 ```
 
-3. Call [wixWindow.openLightbox](https://www.wix.com/corvid/reference/wix-window.html#openLightbox) function with the lightbox name **Clear Confirmation**.
+3. Call [wixWindow.openLightbox](https://www.wix.com/velo/reference/wix-window.html#openLightbox) function with the lightbox name **Clear Confirmation**.
 
 ```
 await wixWindow.openLightbox('Clear Confirmation')
@@ -50,7 +50,7 @@ $w('#approveBtn').onClick(() => {})
 $w('#rejectBtn').onClick(() => {})
 ```
 
-6. Call [wixWIndow.lightbox.close](https://www.wix.com/corvid/reference/wix-window.lightbox.html#close) function with the desired boolean value accoding to the user choice:
+6. Call [wixWIndow.lightbox.close](https://www.wix.com/velo/reference/wix-window.lightbox.html#close) function with the desired boolean value accoding to the user choice:
 
 ```
 $w('#approveBtn').onClick(() => {
@@ -68,7 +68,7 @@ $w('#rejectBtn').onClick(() => {
 const shouldClearTasks = await wixWindow.openLightbox('Clear Confirmation')
 ```
 
-8. If the lightbox returned **true**, we will get all the completed tasks ID's using wixData query. Then, delete all this tasks from the collection using the [wixData.bulkRemove](https://www.wix.com/corvid/reference/wix-data.html#bulkRemove) function.
+8. If the lightbox returned **true**, we will get all the completed tasks ID's using wixData query. Then, delete all this tasks from the collection using the [wixData.bulkRemove](https://www.wix.com/velo/reference/wix-data.html#bulkRemove) function.
 
 ```
 if (shouldClearTasks) {
@@ -78,7 +78,7 @@ if (shouldClearTasks) {
 }
 ```
 
-9. Don't forget to call the [dataset.refresh](https://www.wix.com/corvid/reference/wix-dataset.Dataset.html#refresh) function to see the new list of tasks.
+9. Don't forget to call the [dataset.refresh](https://www.wix.com/velo/reference/wix-dataset.Dataset.html#refresh) function to see the new list of tasks.
 
 ```
 await $w('#dataset1').refresh()
