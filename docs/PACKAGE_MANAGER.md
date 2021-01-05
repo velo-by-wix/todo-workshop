@@ -1,12 +1,12 @@
-## Corvid Package Manager
+## Velo Package Manager
 
-In this module, we will add a sendgrid module using the Corvid package manager and use it to send emails.
+In this module, we will add a sendgrid module using the Velo package manager and use it to send emails.
 
 :warning: Before we start, please create a free account in [sendgrid](https://sendgrid.com/) and then get a web API key for nodejs.
 
 **:bulb: New concepts**
 
-- [Package Manager](https://support.wix.com/en/article/corvid-managing-external-code-libraries-with-the-package-manager) - Calling server-side code from the front-end.
+- [Package Manager](https://support.wix.com/en/article/velo-managing-external-code-libraries-with-the-package-manager) - Calling server-side code from the front-end.
 
 **:white_check_mark: Step-by-step directions**
 
