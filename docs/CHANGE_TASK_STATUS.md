@@ -6,7 +6,7 @@ The flow of changing the task completed status:
 
 **:white_check_mark: Step-by-step directions**
 
-1. Add an [onChange](https://www.wix.com/corvid/reference/$w.Checkbox.html#onChange) event for the checkbox inside the repeater and extract the **checked** property of the checkbox.
+1. Add an [onChange](https://www.wix.com/velo/reference/$w.Checkbox.html#onChange) event for the checkbox inside the repeater and extract the **checked** property of the checkbox.
 
 ```
 $w('#completedCheckbox').onChange((event) => {
@@ -14,15 +14,15 @@ $w('#completedCheckbox').onChange((event) => {
 })
 ```
 
-:warning: You can also add a new event from the [peroperties panel](https://support.wix.com/en/article/corvid-working-with-the-properties-panel).
+:warning: You can also add a new event from the [peroperties panel](https://support.wix.com/en/article/velo-working-with-the-properties-panel).
 
-2. In order to update the current task item with the new checkbox status, we need to initialy get the item from the collection. For that, we need to extract the item ID from the [context](https://www.wix.com/corvid/reference/$w.Event.html#context) in our [event object](https://www.wix.com/corvid/reference/$w.Event.html).
+2. In order to update the current task item with the new checkbox status, we need to initialy get the item from the collection. For that, we need to extract the item ID from the [context](https://www.wix.com/velo/reference/$w.Event.html#context) in our [event object](https://www.wix.com/velo/reference/$w.Event.html).
 
 ```
 const itemId = event.context.itemId
 ```
 
-3. Now we will use [wix-data.get](https://www.wix.com/corvid/reference/wix-data.html#get) function to get the item, and [wix-data.update](https://www.wix.com/corvid/reference/wix-data.html#update) function to update it with the new value.
+3. Now we will use [wix-data.get](https://www.wix.com/velo/reference/wix-data.html#get) function to get the item, and [wix-data.update](https://www.wix.com/velo/reference/wix-data.html#update) function to update it with the new value.
 
 ```
 const item = await wixData.get('TodoTasks', itemId)
