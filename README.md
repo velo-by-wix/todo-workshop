@@ -1,4 +1,4 @@
-# Corvid TODO Workshop
+# Velo TODO Workshop
 
 In this workshop, you will build a [TODO appliction](https://corvidtodo.com) using Velo by Wix.
 
