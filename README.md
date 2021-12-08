@@ -6,7 +6,6 @@ In this workshop, you will build a [TODO appliction](https://corvidtodo.com) usi
 
 - [Velo API Reference](https://www.wix.com/velo/reference/) covers all of Velo's APIs. 
 - [Velo Home Page](https://www.wix.com/velo) contains all Velo materials.
-- [corvid-cli npm package](https://www.npmjs.com/package/corvid-cli) enables you to work in your own local editor.
 
 The complete code for the application is in the [src](src) folder.
 
