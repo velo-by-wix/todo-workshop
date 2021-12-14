@@ -5,7 +5,6 @@ The flow of adding a new task:
 <p padding="40px"><img src="assets/add-new-task-flow.png" alt="Add New Task Flow" width="50%" height="50%"></p>
 
 We will now start writing our home page front-end code in the Velo integrated IDE.
-You can also work on your own local IDE using [Corvid CLI](https://support.wix.com/en/article/working-with-the-corvid-cli).
 
 **:bulb: New concepts**
 

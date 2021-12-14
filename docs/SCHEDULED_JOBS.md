@@ -4,7 +4,7 @@ In this module, we will add a new job that will run daily and send an email to r
 
 **:bulb: New concepts**
 
-- [Job Scheduler](https://support.wix.com/en/article/corvid-scheduling-recurring-jobs) - Allows you to schedule code to run at specified intervals.
+- [Job Scheduler](https://support.wix.com/en/article/velo-scheduling-recurring-jobs) - Allows you to schedule code to run at specified intervals.
 
 **:white_check_mark: Step-by-step directions**
 
