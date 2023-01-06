@@ -1,13 +1,13 @@
 import wixWindow from 'wix-window';
 
 $w.onReady(function () {
-	//TODO: write your page related code here...
+
+    $w('#clearButton').onClick(() => {
+        wixWindow.lightbox.close(true);
+    });
+
+    $w('#cancelButton').onClick(() => {
+        wixWindow.lightbox.close(false);
+    });
+
 });
-
-export function approveBtn_click(event) {
-	wixWindow.lightbox.close(true)
-}
-
-export function rejectBtn_click(event) {
-	wixWindow.lightbox.close(false)
-}
