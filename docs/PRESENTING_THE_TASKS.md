@@ -2,20 +2,25 @@
 
 On the HOME page, we have a repeater element. Each repeater item contains a checkbox and a text element.
 
-<p padding="40px"><img src="assets/repeater.png" alt="Repeater" width="80%" height="80%"></p>
+<p padding="40px"><img src="assets/repeater.png" alt="Repeater"></p>
 
-We'll present the tasks from our collection in the repeater element without writing any code. To do this, we'll use a **dataset**. 
+We'll present the tasks from our collection in this repeater without writing any code. To do this, we'll connect it to our data using a **dataset**. 
 
 **:white_check_mark: Step-by-step instructions**
 
-1. Add a [dataset](https://www.wix.com/velo/reference/wix-dataset.html) by clicking the <img src="assets/element-add.png" alt="Element Add" width="3%" height="3%"> from the vertical menu on the left side of the page. Then click **Database** >> **Dataset**. <p padding="40px"><img src="assets/add-dataset.png" alt="Add dataset" width="40%" height="40%"></p>
-2. Click <img src="assets/dataset-settings-btn.png" alt="Dataset Settings Button" width="8%" height="8%"> to access the Dataset Settings.
-3. Set the collection to **TodoTasks**. <br>Set the mode to **Read & Write**. <p padding="40px"><img src="assets/dataset-settings.png" alt="Add dataset" width="30%" height="30%"></p>
-4. Connect the repeater to the dataset by clicking the repeater's Connect button <img src="assets/connect-btn.png" alt="Connect Button" width="3%" height="3%">. Then connect the other elements. When they're connected, the Connect Repeater panel will look like this: <p padding="40px"><img src="assets/repeater-connect-panel.png" alt="Repeater Connect Panel" width="40%" height="40%"></p>
+1. First click the "Connect to Data" button on your repeater: <p><img src="assets/connect-to-data.png" alt="Connect to Data"></p>
 
-:warning: To achieve these settings, you'll need to connect the text element and checkbox element from different Connect panels.  
+1. Then choose "Create Dataset": <p><img src="assets/create-dataset.png" alt="Create dataset"></p>
 
-5. Click the **Preview** button on the right side of the top bar menu to see the mock data from the collection.
+1. Click the "Choose a collection" dropdown and select our "TodoTasks" collection we created earlier. Then click "Create". <p><img src="assets/choose-a-collection.png" alt="Choose a collection"></p>
+
+1. Now connect the elements. Connect the Text element to the "Title" column of the data collection, and connect the Switch element to the boolean "Completed" column of the data collection. <p><img src="assets/connect-elements.png" alt="Connect Elements"></p>
+
+1. Close that dialog box and notice now that there is a new element on your page called "TodoTasks dataset". Select it and click on "Settings". <p><img src="assets/todotasks-dataset.png" alt="Connect Elements"></p>
+
+1. In settings set the "Mode" to "Read & Write". We'll do this because we want users to be able to both read their todo tasks and modify them from the repeater.  
+
+1. Click the **Preview** button on the right side of the top bar menu to see your work in action! It should now be displaying the items from your repeater. But we'll still need to do a bit of work to get them to update your collection's data.
 
 Hooray! Now let's continue to the next stage: adding a new task from the UI.
 
