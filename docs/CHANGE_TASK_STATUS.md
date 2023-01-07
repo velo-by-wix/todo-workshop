@@ -2,36 +2,44 @@
 
 The flow of changing the task completed status:
 
-<p padding="40px"><img src="assets/change-task-status-flow.png" alt="Change Task Status Flow" width="25%" height="25%"></p>
+<p><img src="assets/change-task-status-flow.png" alt="Change Task Status Flow"></p>
 
 **:white_check_mark: Step-by-step directions**
 
-1. Add an [onChange](https://www.wix.com/velo/reference/$w.Checkbox.html#onChange) event for the checkbox inside the repeater and extract the **checked** property of the checkbox.
+1. First we'll create an event handler for the [Switch.onChange](https://www.wix.com/velo/reference/$w/switch/onchange) event.
 
-```
-$w('#completedCheckbox').onChange((event) => {
-	const checked = event.target.checked
-})
-```
-
-:warning: You can also add a new event from the [peroperties panel](https://support.wix.com/en/article/velo-working-with-the-properties-panel).
-
-2. In order to update the current task item with the new checkbox status, we need to initialy get the item from the collection. For that, we need to extract the item ID from the [context](https://www.wix.com/velo/reference/$w.Event.html#context) in our [event object](https://www.wix.com/velo/reference/$w.Event.html).
-
-```
-const itemId = event.context.itemId
+```js
+    // Event handler for when a todo's completed status is changed
+    $w('#completedSwitch').onChange(handleSwitchChange);
 ```
 
-3. Now we will use [wix-data.get](https://www.wix.com/velo/reference/wix-data.html#get) function to get the item, and [wix-data.update](https://www.wix.com/velo/reference/wix-data.html#update) function to update it with the new value.
+2. Now we'll create our `handleSwitchChange(event)` function. We'll do this so that whenever a user clicks on the switch it will switch its value between true and false. This value change will trigger the onChange event and then we can update our collection with `wixData` to record this.
 
+```js
+// Update the collection when a todo's completed status is changed
+async function handleSwitchChange(event) {
+    const $item = $w.at(event.context);
+    const _id = event.context.itemId;
+    const title = $item('#taskText').text;
+    const checked = $item('#completedSwitch').checked;
+
+    let updatedItem = {
+        _id,
+        title,
+        completed: checked
+    }
+
+    await wixData.update(TODO_COLLECTION, updatedItem);
+    // getIncompleteTodoCount(); // Commented out for now, we'll define this later!
+}
 ```
-const item = await wixData.get('TodoTasks', itemId)
-const updatedItem = Object.assign({}, item, { completed: checked })
-await wixData.update('TodoTasks', updatedItem)
-```
 
-:warning: You will be required to async the onChange event function since wix-data get and update functions are asynchronous.
+So here we grab a few bits of information we need to update the object in our collection, notably its `_id`, `title`, and `completed` status. 
 
-:exclamation: **Go to preview, change some of the task completed status. Go back to tthe db collection and make sure it is actually changed.**
+:note: The `Switch` element calls its property `checked` rather than `completed`.
+
+:warning: When calling `wixData.update()` it's important to reconstruct the entire object and not just the part you want to update. Any fields that are not included in the `updatedItem` will be deleted if left empty, even if unchanged.
+
+:exclamation: **As always make sure to Preview your changes before the next step.**
 
 :fast_forward: Next Module => [Uncompleted Tasks Counter](UNCOMPLETED_TASK_COUNTER.md)
