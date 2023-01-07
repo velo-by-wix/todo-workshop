@@ -36,7 +36,7 @@ async function handleSwitchChange(event) {
 
 So here we grab a few bits of information we need to update the object in our collection, notably its `_id`, `title`, and `completed` status. 
 
-:note: The `Switch` element calls its property `checked` rather than `completed`.
+:information_source: The `Switch` element calls its property `checked` rather than `completed`.
 
 :warning: When calling `wixData.update()` it's important to reconstruct the entire object and not just the part you want to update. Any fields that are not included in the `updatedItem` will be deleted if left empty, even if unchanged.
 
