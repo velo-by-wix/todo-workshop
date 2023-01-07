@@ -16,9 +16,9 @@ This workshop is based on a pre-designed [template](https://www.wix.com/website-
 
 **:white_check_mark: Step-by-step instructions**
 
-1. Go to this [template](https://www.wix.com/website-template/view/html/2495).
-2. Click <img src="docs/assets/edit-this-site.png" alt="Edit this site" width="10%" height="10%">.
-3. Sign in to Wix.
+1. Sign in to Wix.
+1. Go to this [template](https://editor.wix.com/html/editor/web/renderer/new?siteId=d6d60d42-865f-486e-885c-080244e2bc71&metaSiteId=ff9787ac-c4c0-4f81-b90b-cbadde5eb461&autoDevMode=true).
+2. The link will automatically make a copy of the template.
 4. Let's start having fun!
 
 ### modules
