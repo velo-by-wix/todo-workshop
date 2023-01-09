@@ -7,27 +7,19 @@ import { getQuote } from "backend/motivation.jsw";
 const TODO_COLLECTION = 'TodoTasks'
 const TODO_DATASET = '#dataset1';
 
-$w.onReady(async function () {
+$w.onReady(function () {
     // Event handlers for adding a task
     $w('#addTaskButton').onClick(addNewTask);
 
     $w('#taskInput').onKeyPress(async (event) => {
-        const { key } = event;
-
-        if (key === 'Enter') addNewTask();
+        if (event.key === 'Enter') addNewTask();
     });
 
     // Event handler for updating dataset filter
-    $w('#filterRadioGroup').onChange((event) => setDatasetFilter(event.target.value));
+    $w('#filterRadioGroup').onChange(setDatasetFilter);
 
     // Event handler for when a todo's completed status is changed
-    $w('#completedSwitch').onChange(async (event) => {
-        await handleSwitchChange(event);
-
-        getIncompleteTodoCount();
-
-        $w(TODO_DATASET).refresh();
-    });
+    $w('#completedSwitch').onChange(handleSwitchChange);
 
     // Event handler for when a user wants to clear completed tasks
     $w('#clearCompletedButton').onClick(async () => {
@@ -57,6 +49,8 @@ async function init() {
 // Handle adding a new task
 async function addNewTask() {
     const taskTitle = $w('#taskInput').value;
+    $w('#taskInput').value = "";
+
     if (taskTitle.trim() === '') {
         return;
     }
@@ -66,13 +60,8 @@ async function addNewTask() {
         completed: false
     }
 
-    $w('#taskInput').disable();
-
     await wixData.insert(TODO_COLLECTION, newTask);
     $w(TODO_DATASET).refresh();
-
-    $w('#taskInput').value = "";
-    $w('#taskInput').enable();
 }
 
 // Update the collection when a todo's completed status is changed
@@ -88,7 +77,9 @@ async function handleSwitchChange(event) {
         completed: checked
     }
 
-    return wixData.update(TODO_COLLECTION, updatedItem);
+    await wixData.update(TODO_COLLECTION, updatedItem);
+    $w(TODO_DATASET).refresh();
+    getIncompleteTodoCount();
 }
 
 // Get the count of TODOs that are not marked completed
@@ -96,7 +87,7 @@ function getIncompleteTodoCount() {
     wixData
         .query(TODO_COLLECTION)
         .eq('completed', false)
-        .count({ consistentRead: true }) // Count from primary database, changes may not have propagated by the time we count()
+        .count({ consistentRead: true }) // Count from primary database
         .then((result) => {
             $w('#activeTasksCount').text = `${result} items left`;
             $w('#activeTasksCount').show("float");
@@ -107,7 +98,8 @@ function getIncompleteTodoCount() {
 }
 
 // Filter the dataset based on the filter value selected
-function setDatasetFilter(filterValue) {
+function setDatasetFilter(event) {
+    let filterValue = event.target.value;
     let filter;
 
     switch (filterValue) {
@@ -125,7 +117,7 @@ function setDatasetFilter(filterValue) {
     $w(TODO_DATASET).setFilter(filter);
 }
 
-// 
+// Delete all of a user's tasks where completed is set as true
 async function clearCompletedTasks() {
     let completed = await wixData.query(TODO_COLLECTION)
         .eq('completed', true)

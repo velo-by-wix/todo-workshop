@@ -1,5 +1,5 @@
 export function getQuote() {
-    // let quotes = ["Get it done!", "You got this!", "Focus. Conquer one thing at a time."]
+// Take an array of strings, pick a random index from that array, and return it.
     let quotes = [
         "The best time to plant a tree was 20 years ago. The second best time is now.",
         "The secret of getting ahead is getting started.",
