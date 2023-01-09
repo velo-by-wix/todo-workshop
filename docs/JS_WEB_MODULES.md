@@ -77,4 +77,4 @@ That's it! You're now calling backend code from the frontend, it's executing on 
 
 :exclamation: **Go Preview your code and make sure the inspirational quotes are updating!**
 
-:fast_forward: Next Module => [NPM modules](PACKAGE_MANAGER.md)
+:fast_forward: Next Module => [Deploy to Production](PRODUCTION.md)

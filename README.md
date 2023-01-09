@@ -37,6 +37,4 @@ This workshop is divided into four modules. Each module describes what we're goi
 | [Tasks Filter](docs/TASK_FILTER.md)                                          | Filter the tasks according to the completed status.                      |
 | [Clear Completed Tasks](docs/CLEAR_COMPLETED_TASKS.md)                       | Clear all completed tasks from the collection.                           |
 | [JavaScript Web Modules](docs/JS_WEB_MODULES.md)                             | Call server-side code from the front-end.                                |
-| [Velo Package Manager](docs/PACKAGE_MANAGER.md)                              | Manage your site's npm packages with the Package Manager.                |
-| [Scheduled Jobs](docs/SCHEDULED_JOBS.md)                                     | Schedule code to run at specified intervals using the Job Scheduler.     |
-| [Production](docs/PRODUCTION.md)                                             | Go live.                                                                 |
+| [Deploy to Production](docs/PRODUCTION.md)                                   | Go live.                                                                 |
