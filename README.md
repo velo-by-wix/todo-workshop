@@ -12,7 +12,7 @@ For reference we've included the complete code for this application in the [src]
 
 ### Getting started
 
-This workshop is based on a pre-designed [template](https://www.wix.com/website-template/view/html/2495).
+This workshop is based on a pre-designed [template](https://editor.wix.com/html/editor/web/renderer/new?siteId=d6d60d42-865f-486e-885c-080244e2bc71&metaSiteId=ff9787ac-c4c0-4f81-b90b-cbadde5eb461&autoDevMode=true).
 
 **:white_check_mark: Step-by-step instructions**
 
