@@ -9,8 +9,6 @@ In this module, we will present the remaining uncompleted tasks counter in the t
 
 **:white_check_mark: Step-by-step directions**
 
-Previously we worked forwards, defining our event handlers, and then our functions. This time it might make a bit more sense to work backwards as we'll be using this function in a few places.
-
 1. So first let's define our `getIncompleteTodoCount()` function. You might recall seeing this function mentioned in an earlier step. Now we'll get to define it so that it can update our "x items left" count. Nothing is more satisfying than seeing your TODO list count tick down so let's make that easy for our users to see!
 
 ```js
