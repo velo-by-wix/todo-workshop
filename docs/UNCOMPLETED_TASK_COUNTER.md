@@ -28,7 +28,7 @@ function getIncompleteTodoCount() {
 }
 ```
 
-Here we use `wixData.query()` and it returns a [WixDataQuery](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html) object that we can then call various functions on to construct our query. 
+Here we use `wixData.query()` and it returns a [WixDataQuery](https://www.wix.com/velo/reference/wix-data.WixData.html) object that we can then call various functions on to construct our query. 
 
 In this case we want all of our incomplete items, so we query for `.eq('completed', false)`. We don't want the items themselves, we just want to count them so we call `count()`.
 
@@ -80,6 +80,7 @@ $w.onReady(function () {
 async function handleSwitchChange(event) {
 	// Rest of your code here...
     getIncompleteTodoCount(); // you can uncomment me now!
+    // setDatasetFilter();
 }
 ```
 

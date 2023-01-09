@@ -24,6 +24,7 @@ async function handleSwitchChange(event) {
 
     await wixData.update(TODO_COLLECTION, updatedItem);
     // getIncompleteTodoCount(); // Commented out for now, we'll define this later!
+    // setDatasetFilter(); // Same here!
 }
 ```
 
