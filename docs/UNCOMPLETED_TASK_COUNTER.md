@@ -80,7 +80,6 @@ $w.onReady(function () {
 async function handleSwitchChange(event) {
 	// Rest of your code here...
     getIncompleteTodoCount(); // you can uncomment me now!
-    // setDatasetFilter();
 }
 ```
 

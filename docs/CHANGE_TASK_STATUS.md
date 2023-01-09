@@ -23,8 +23,8 @@ async function handleSwitchChange(event) {
     }
 
     await wixData.update(TODO_COLLECTION, updatedItem);
+    $w(TODO_DATASET).refresh();
     // getIncompleteTodoCount(); // Commented out for now, we'll define this later!
-    // setDatasetFilter(); // Same here!
 }
 ```
 
