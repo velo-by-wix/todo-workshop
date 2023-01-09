@@ -54,13 +54,17 @@ This function will do several things:
 
 3. We'll want to call this function on two different events. One when someone clicks our `#addTaskButton` and the other when they hit enter while their typing cursor is inside the `#taskInput` element.
 
+:information_source: These event handlers, like all others we'll define, must be placed inside your `$w.onReady()` function.
+
 ```js
+$w.onReady(() => {
     // Event handlers for adding a task
     $w('#addTaskButton').onClick(addNewTask);
 
     $w('#taskInput').onKeyPress(async (event) => {
         if (event.key === 'Enter') addNewTask();
     });
+})
 ```
 
 :exclamation: **Go to preview, Add a new task, make sure it is being shown in the repeater.**

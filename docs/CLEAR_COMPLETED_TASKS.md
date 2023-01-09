@@ -35,7 +35,7 @@ async function clearCompletedTasks() {
     let toRemove = completed.items.map(i => i._id);
     await wixData.bulkRemove(TODO_COLLECTION, toRemove);
 
-    $w('#dataset1').refresh();
+    $w(TODO_DATASET).refresh();
 }
 ```
 We'll do a `query()` like we have before, this time getting a set of items where `completed === true`. Then we'll call `wixData.bulkRemove()` to remove these items. Before calling `bulkRemove` though we'll need to first transform our data slightly, taking the set of `completed` items and turning them into the array of item ids that `bulkRemove` requires.

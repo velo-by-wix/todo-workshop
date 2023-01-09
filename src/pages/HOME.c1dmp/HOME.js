@@ -125,5 +125,5 @@ async function clearCompletedTasks() {
     let toRemove = completed.items.map(i => i._id);
     await wixData.bulkRemove(TODO_COLLECTION, toRemove);
 
-    $w('#dataset1').refresh();
+    $w(TODO_DATASET).refresh();
 }
