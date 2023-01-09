@@ -14,7 +14,7 @@ Lightbox:
 
 - [WixWindow](https://www.wix.com/velo/reference/wix-window.html) - Contains functionality that pertains to the current browser window.
 - [Lightbox](https://support.wix.com/en/article/wix-editor-adding-and-setting-up-a-lightbox) - A way to show a modal/dialog on screen that overlays the current page.
-- [WixWindow.lightbox](https://www.wix.com/velo/reference/wix-window.lightbox.html) - API for controlling a lightbox in front-end code.
+- [WixWindow.lightbox](https://www.wix.com/velo/reference/wix-window.lightbox.html) - API for controlling a lightbox in frontend code.
 
 **:white_check_mark: Step-by-step directions**
 

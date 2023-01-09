@@ -10,7 +10,7 @@ Let's get started!
 
 **:bulb: New concepts**
 
-- [JavaScript Web Modules](https://support.wix.com/en/article/velo-web-modules-calling-server-side-code-from-the-front-end) - Calling server-side code from the front-end.
+- [JavaScript Web Modules](https://support.wix.com/en/article/velo-web-modules-calling-server-side-code-from-the-frontend) - Calling server-side code from the frontend.
 
 **:white_check_mark: Step-by-step directions**
 

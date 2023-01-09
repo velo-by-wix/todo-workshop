@@ -36,5 +36,5 @@ This workshop is divided into four modules. Each module describes what we're goi
 | [Uncompleted Tasks Counter](docs/UNCOMPLETED_TASK_COUNTER.md)                | Set the status text to present the number of unfinished tasks.           |
 | [Tasks Filter](docs/TASK_FILTER.md)                                          | Filter the tasks according to the completed status.                      |
 | [Clear Completed Tasks](docs/CLEAR_COMPLETED_TASKS.md)                       | Clear all completed tasks from the collection.                           |
-| [JavaScript Web Modules](docs/JS_WEB_MODULES.md)                             | Call server-side code from the front-end.                                |
+| [JavaScript Web Modules](docs/JS_WEB_MODULES.md)                             | Call backend code from the frontend.                                     |
 | [Deploy to Production](docs/PRODUCTION.md)                                   | Go live.                                                                 |

@@ -4,7 +4,7 @@ The flow of adding a new task:
 
 <p><img src="assets/add-new-task-flow.png" alt="Add New Task Flow"></p>
 
-We will now start writing our home page front-end code in the Velo integrated IDE.
+We will now start writing our home page frontend code in the Velo integrated IDE.
 
 **:bulb: New concepts**
 
