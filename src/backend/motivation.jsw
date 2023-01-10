@@ -1,0 +1,25 @@
+export function getQuote() {
+// Take an array of strings, pick a random index from that array, and return it.
+    let quotes = [
+        "The best time to plant a tree was 20 years ago. The second best time is now.",
+        "The secret of getting ahead is getting started.",
+        "An ounce of action is worth a ton of theory.",
+        "The two most powerful warriors are patience and time.",
+        "If you want to make an easy job seem mighty hard, just keep putting off doing it.",
+        "The best way to get something done is to begin.",
+        "Don't wait. The time will never be just right.",
+        "The most effective way to do it, is to do it.",
+        "The only limit to our realization of tomorrow will be our doubts of today.",
+        "The key to getting things done is to prioritize. Decide what needs to be done and do it first.",
+        "The most difficult thing is the decision to act, the rest is merely tenacity.",
+        "A goal is a dream with a deadline.",
+        "It is not enough to be busy. The question is: what are we busy about?",
+        "Get it done!",
+        "You got this!", 
+        "Focus. Conquer one thing at a time."
+    ]
+
+    let index = Math.floor(Math.random() * quotes.length);
+
+    return quotes[index];
+}

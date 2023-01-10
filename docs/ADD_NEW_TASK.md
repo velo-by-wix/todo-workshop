@@ -2,101 +2,68 @@
 
 The flow of adding a new task:
 
-<p padding="40px"><img src="assets/add-new-task-flow.png" alt="Add New Task Flow" width="50%" height="50%"></p>
+<p><img src="assets/add-new-task-flow.png" alt="Add New Task Flow"></p>
 
-We will now start writing our home page front-end code in the Velo integrated IDE.
+We will now start writing our home page frontend code in the Velo integrated IDE.
 
 **:bulb: New concepts**
 
 - [$w](https://www.wix.com/velo/reference/$w.html#$w) - Selects and returns elements from a page.
 - [WixData](https://www.wix.com/velo/reference/wix-data.html) - Functionality for working with data in collections.
+- Event handlers for [Button.onClick](https://www.wix.com/velo/reference/$w.Button.html#onClick) and [TextInput.onKeypress](https://www.wix.com/velo/reference/$w/textinput/onkeypress).
 
 **:white_check_mark: Step-by-step directions**
 
-1. Add code for [button.onClick](https://www.wix.com/velo/reference/$w.Button.html#onClick) event on the task button using \$w.
+1. Let's add some useful imports and variables to the HOME page. We'll use these along with other imports later so it's useful to add them now.
 
-```
-$w('#addTaskButton').onClick(() => {
-	// event code here
-})
-```
-
-2. Get the task [textInput.value](https://www.wix.com/velo/reference/$w.TextInput.html#value).
-
-```
-$w('#addTaskButton').onClick(() => {
-	const taskTitle = $w('#taskInput').value
-})
-```
-
-3. Import wixData module in the top of the page.
-
-```
+```js
 import wixData from 'wix-data';
+
+const TODO_COLLECTION = 'TodoTasks'
+const TODO_DATASET = '#dataset1';
 ```
 
-4. Insert the new task.
+2. Now create a function to handle adding a new task
 
-```
-const newTask = {
-	title: taskTitle,
-	completed: false
-}
+```js
+// Handle adding a new task
+async function addNewTask() {
+    const taskTitle = $w('#taskInput').value;
+	$w('#taskInput').value = "";
 
-await wixData.insert('TodoTasks', newTask)
-```
+    if (taskTitle.trim() === '') {
+        return;
+    }
 
-5. Re-fetch the [dataset](https://www.wix.com/velo/reference/wix-dataset.Dataset.html) data using the [dataset.refresh](https://www.wix.com/velo/reference/wix-dataset.Dataset.html#refresh) function after inserting the new task.
+    const newTask = {
+        title: taskTitle,
+        completed: false
+    }
 
-```
-await $w('#dataset1').refresh()
-```
-
-6. Clear the task [textInput.value](https://www.wix.com/velo/reference/$w.TextInput.html#value).
-
-```
-$w('#taskInput').value = ''
-```
-
-7. Extract the logic to addNewTask function and add condition for checking emptyness.
-
-```
-const addNewTask = async () => {
-	const taskTitle = $w('#taskInput').value
-
-	if (taskTitle.trim() === '') {
-		return
-	}
-
-	const newTask = {
-		title: taskTitle,
-		completed: false
-	}
-
-	await wixData.insert('TodoTasks', newTask)
-	await $w('#dataset1').refresh()
-	$w('#taskInput').value = ''
+    await wixData.insert(TODO_COLLECTION, newTask);
+    $w(TODO_DATASET).refresh();
 }
 ```
 
-:warning: Don't forget to call it from your onClick event
+This function will do several things:
+- Gets the text entered into the `#taskInput` element.
+- Immediately clears the element to indicate to the user that the item was submitted, and make it clear for the next entry.
+- Checks to make sure the task entered is not empty.
+- Prepares a `newTask` and `insert()` it into the `TODO_COLLECTION`.
+- `refresh()` the `TODO_DATASET` so it can display the new item inserted into the `TODO_COLLECTION`.
 
-8. Add [textInput.onKeyPress](https://www.wix.com/velo/reference/$w.TextInput.html#onKeyPress) event on the task text input.
+3. We'll want to call this function on two different events. One when someone clicks our `#addTaskButton` and the other when they hit enter while their typing cursor is inside the `#taskInput` element.
 
-```
-$w('#taskInput').onKeyPress(async event => {
-	// event code here
-})
-```
+:information_source: These event handlers, like all others we'll define, must be placed inside your `$w.onReady()` function.
 
-9. Call addNewTask if the [key](https://www.wix.com/velo/reference/$w.KeyboardEvent.html#key) in the [event](https://www.wix.com/velo/reference/$w.KeyboardEvent.html) object is **Enter**.
+```js
+$w.onReady(() => {
+    // Event handlers for adding a task
+    $w('#addTaskButton').onClick(addNewTask);
 
-```
-$w('#taskInput').onKeyPress(async event => {
-	const { key } = event
-	if (key === 'Enter') {
-		await addNewTask()
-	}
+    $w('#taskInput').onKeyPress(async (event) => {
+        if (event.key === 'Enter') addNewTask();
+    });
 })
 ```
 

@@ -4,12 +4,26 @@ In this module, we'll create a database collection to store the application task
 
 <br>**:white_check_mark: Step-by-step instructions**
 
-1. From the top bar menu, hover over **Dev Mode** and click **Turn on Dev Mode** to enable Velo. <p padding="40px"><img src="assets/dev-mode-on.png" alt="Enable Dev Mode" width="50%" height="50%"></p>  
-2. From the **Site Structure** sidebar on the left, under the **Database** section, click on the **Add a new collection** link. <p padding="40px"><img src="assets/add-collection.png" alt="Add Collection" width="30%" height="30%"></p>
-3. Click **Start Creating**. In the next panel that opens, click the button on the right, **Create a Collection**.
-4. Name the collection **TodoTasks**. Click the **Create Collection** button.
-5. A **Title** field will be created by default. <br>Add another field by clicking <img src="assets/field-add.png" alt="Field Add" width="3%" height="3%">. Name the field **Completed** and set the Field Type to **Boolean**. Click **Add**. <p padding="40px"><img src="assets/completed-field.png" alt="Add Field" width="20%" height="20%"></p>
-6. Add two items to your new collection and set one Completed status to true. <p padding="40px"><img src="assets/collection.png" alt="Collection" width="40%" height="40%"><p>
+1. From the top bar menu, hover over **Dev Mode** and click **Enable Developer Mode**. <p><img src="assets/dev-mode-on.png" alt="dev mode on"></p>
+
+1. From the **Site Structure** sidebar on the left, navigate to the **Databases** section. <p><img src="assets/databases.png" alt="databases"></p>
+
+1. click on the **Create Collection** button. <p><img src="assets/create-collection.png" alt="create collection"></p>
+
+1. Name the collection **TodoTasks** and click **Create**.
+
+1. A **Title** field will be created by default. Add another field by clicking the plus sign next to "Title". Name the field **Completed** and set the Field Type to **Boolean**. Click **Add**. <p><img src="assets/completed-field.png" alt="completed field"></p>
+
+1. Add two items to your new collection and set one Completed status to true. <p><img src="assets/collection.png" alt="collection"></p>
+
+1. Open the permissions dialog. <p><img src="assets/permissions-dialog.png" alt="permissions dialog"></p>
+
+1. Set the permissions on your new collection so your site members can read, add, and modify their own personal data in it. You can [learn more about collection permissions here](https://support.wix.com/en/article/collection-permissions-an-overview).
+    - View: Site Member Author
+    - Add: Site Member
+    - Delete: Site Member Author
+    - Update: Site Member Author 
+    <p><img src="assets/permissions-settings.png" alt="permissions settings"></p>
 
 :exclamation: **We just created a new database collection. In the next module, we'll present its data in our web application.**
 
